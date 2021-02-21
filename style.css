@@ -1,92 +1,92 @@
-​*{
-  padding:0;
-  margin:0;
-  box-sizing: border-box;
+body {
+	font-family: 'Poppins', sans-serif;
 }
-.c-carousel{
-  height:100vh;
-  width:100%;
-  position:relative;
-  display:flex;
+header .carousel-inner .item {
+	height: 100vh;
 }
-.c-carousel-item{
-  position:absolute;
-  left:0;
-  top:0;
-  opacity:0;
-  width:100%;
-  height:100%;
-  transition:all 0.5s ease-in-out;
+.navbar-inverse {
+	background-color: transparent;
+	border-color: transparent;
 }
-.c-carousel-item.active{
-  opacity:1;
+.navbar-inverse .navbar-brand {
+	color: #fff;
+	font-size: 40px;
+	padding: 40px 15px;
+	font-weight: 900;
 }
-.c-carousel-item img{
-  position:relative;
-  width:100%;
-  height:100%;
-  object-fit: cover;
-  object-position: center;
+.nav.navbar-nav.navbar-right {
+	margin: 25px 0;
 }
-.c-carousel-control-prev{
-  position:absolute;
-  width:auto;
-  padding:0 40px;
-  height:100%;
-  left:50px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  color:#e2e2e2;
-  font-size: 40px;
-  cursor: pointer;
+.navbar-inverse .navbar-nav>li>a {
+	color: #fff;
+	text-transform: uppercase;
 }
-.c-carousel-control-next{
-  position:absolute;
-  width:auto;
-  padding:0 40px;
-  height:100%;
-  right:50px;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  color:#e2e2e2;
-  font-size: 40px;
-  cursor: pointer;
+.banner {
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100vh;
 }
-.c-carousel-indicators{
-  position:absolute;
-  bottom:50px;
-  left:50%;
-  transform:translateX(-50%);
-  width:70%;
-  height:auto;
-  display:flex;
-  align-items: center;
-  justify-content: center;
+.carousel-caption {
+	padding-bottom: 250px;
+	font-family: poppins;
 }
-.c-carousel-indicators ul{
-  position:relative;
-  width:100%;
-  height:100%;
-  display:flex;
-  align-items: center;
-  justify-content: space-around;
+.carousel-caption h2 {
+	font-size: 70px;
+	text-transform: uppercase;
+	font-weight: bold;
 }
-.c-carousel-indicator-li{
-  position:relative;
-  display:inline-block;
-  height:auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index:3;
-  cursor:pointer;
-  transition:all 0.3s ease-in-out;
+.carousel-caption h2 span {
+	color: #EDBB00;
 }
-.c-carousel-indicator-li.active{
-  transform:scale(1.1);
-  border:2px solid #aaaaaa;
+.carousel-caption a {
+	background: #EDBB00;
+	padding: 15px 35px;
+	display: inline-block;
+	margin-top: 15px;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 25px;
 }
+.carousel-control.right {
+	background-image: none;
+}
+.carousel-control.left {
+	background-image: none;
+}
+.carousel-indicators .active {
+	background-color: #EDBB00;
+	border-color: #EDBB00;
+}
+/*responsive css*/
 
-
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.carousel-caption {
+		padding-bottom: 350px;
+	}
+	.carousel-caption h2 {
+		font-size: 50px;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.navbar-inverse .navbar-brand {
+		font-size: 30px;
+		padding: 20px 15px;
+	}
+	.navbar-collapse {
+		background: rgba(0, 0, 0, 0.5);
+	}
+	.carousel-caption {
+		padding-bottom: 120px;
+	}
+	.carousel-caption h2 {
+		font-size: 25px;
+	}
+	.carousel-caption h3 {
+		font-size: 18px;
+	}
+	.carousel-caption a {
+		padding: 10px 25px;
+	}
+}
